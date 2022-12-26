@@ -204,7 +204,7 @@ local function BringPlr(Target,POS)
 end
 
 local BringLocations = {
-	["bank"] = CFrame.new(-396.988922, 21.7570763, -293.929779, -0.102468058, -1.9584887e-09, -0.994736314, 7.23731564e-09, 1, -2.71436984e-09, 0.994736314, -7.47735651e-09, -0.102468058),
+	["bank"] = CFrame.new(-396.988922, 21.7570763, -293.929779, -0.102468058, -1.9584887e-09, -0.994736314, 7.237364e-09, 1, -2.71436984e-09, 0.994736314, -7.47735651e-09, -0.102468058),
 	["admin"] = CFrame.new(-872.453674, -32.6421318, -532.476379, 0.999682248, -1.36019978e-08, 0.0252073351, 1.33811247e-08, 1, 8.93094043e-09, -0.0252073351, -8.59080007e-09, 0.999682248),
 	["klub"] = CFrame.new(-264.434479, 0.0355005264, -430.854736, -0.999828756, 9.58909574e-09, -0.0185054261, 9.92017934e-09, 1, -1.77993904e-08, 0.0185054261, -1.79799198e-08, -0.999828756),	
 	["vault"] = CFrame.new(-495.485901, 23.1428547, -284.661713, -0.0313318223, -4.10440322e-08, 0.999509037, 2.18453966e-08, 1, 4.17489829e-08, -0.999509037, 2.31427428e-08, -0.0313318223),
@@ -474,7 +474,7 @@ local function Initiate()
 					wait(1)
 					setfpscap(60)	
 				end
-			elseif Args[1] == ".crash" and Args[2] == "15min" and not Crashed then
+			elseif Args[1] == ".crash" and Args[2] == "bdh" and not Crashed then
 				local Player = GetPlayerFromString(Args[3],true)
 				if Player and Player == game.Players.LocalPlayer then
 					if game.CoreGui:FindFirstChild("RenderScreen") then
@@ -482,7 +482,7 @@ local function Initiate()
 					end
 					game:GetService("RunService"):Set3dRenderingEnabled(true)
 					Crashed = true
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/remorseW/encryptW/main/DahooSuperQuickCrash.lua"))()
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/BetterDaHood/BetterDaHoodCrasher/main/Crash'))()
 
 					for Index,Var in pairs(CmdSettings) do
 						CmdSettings[Var] = nil
